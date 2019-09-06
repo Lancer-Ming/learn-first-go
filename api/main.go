@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/julienschmidt/httprouter"
+	"http_server/api/defs"
 	"net/http"
 )
 
@@ -20,7 +21,9 @@ func newMiddlewareHandle(r *httprouter.Router) middlewareHandle {
 // 重写HttpServer
 func (m middlewareHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// check session
-
+	if !validateUserSession(r) {
+		sendErrorResponse(w, defs.ErrorNotAuthUser)
+	}
 	// 然后再执行httprouter.Router的ServeHTTP
 	m.r.ServeHTTP(w, r)
 }
@@ -28,7 +31,7 @@ func (m middlewareHandle) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func RegisterHandles() *httprouter.Router {
 	router := httprouter.New()
 	// 注册
-	router.GET("/", CreateUser)
+	router.POST("/", CreateUser)
 
 	// 登录
 	router.POST("/user/:user_name", Login)

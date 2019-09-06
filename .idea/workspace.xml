@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17a59d9c-9c78-47f5-81d9-0d1a54b917da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/streamserver/defs.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/streamserver/handlers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/streamserver/limiter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/streamserver/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/streamserver/response.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/defs/apidefs.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/defs/apidefs.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/defs/err.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/defs/err.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/handles.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/handles.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/response.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +56,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build http_server/streamserver">
     <configuration name="go build http_server/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="http_server" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -64,8 +66,18 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build http_server/streamserver" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="http_server" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/streamserver/main.go" />
+      <package value="http_server/streamserver" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build http_server/streamserver" />
         <item itemvalue="Go Build.go build http_server/api" />
       </list>
     </recent_temporary>
@@ -81,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567490432693</updated>
       <workItem from="1567490434039" duration="8000" />
-      <workItem from="1567492754502" duration="31070000" />
+      <workItem from="1567492754502" duration="43432000" />
     </task>
     <servers />
   </component>

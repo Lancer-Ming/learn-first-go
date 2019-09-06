@@ -14,7 +14,7 @@ import (
 
 func CreateUser(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	res, _ := ioutil.ReadAll(r.Body)
-	ubody := defs.UserCredential{}
+	ubody := &defs.UserCredential{}
 	// 如果参数解析错误
 	if err := json.Unmarshal(res, ubody); err != nil {
 		// 发送错误
@@ -30,7 +30,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	// 获取session_id
 	id := session.GenerateNewSessionId(ubody.Username)
 	su := &defs.SignedUp{
-		Success:   false,
+		Success:   true,
 		SessionId: id,
 	}
 	if resp, err := json.Marshal(su); err != nil {
